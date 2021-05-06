@@ -1,5 +1,6 @@
 import React from "react";
 import { ChildClass } from "./ChildClass";
+import { SiblingClass } from "./SiblingClass";
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <p>{this.state.totalClicks}</p>
+        <SiblingClass totalClicks={this.state.totalClicks} />
         <ChildClass onClick={this.handleClick} />
       </div>
     );
